@@ -1,5 +1,9 @@
 @echo off
 
+set HOME=%cd%\home
+set USERPROFILE=%cd%\home\user-profile
+set APPDATA=%cd%\home\app-data
+
 set GIT_CEILING_DIRECTORIES=%cd%\playground
 
 set PIP_NO_CACHE_DIR=off
