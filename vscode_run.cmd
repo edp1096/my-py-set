@@ -1,5 +1,7 @@
 @echo off
 
+if not exist vscode ( echo Folder 'vscode' not found & echo Please install & ping -n 3 127.0.0.1 >nul & exit )
+
 set HOME=%cd%\home
 set USERPROFILE=%cd%\home\user-profile
 set APPDATA=%cd%\home\app-data
