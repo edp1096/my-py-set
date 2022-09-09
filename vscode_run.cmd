@@ -10,7 +10,7 @@ set GIT_CEILING_DIRECTORIES=%cd%\playground
 
 set PIP_NO_CACHE_DIR=off
 
-set PATH=%cd%\bin;C:\Windows;C:\Windows\System;C:\Windows\System32
+set PATH=%cd%\scripts;%cd%\bin;C:\Windows;C:\Windows\System;C:\Windows\System32
 set PATH=%cd%\python3;%cd%\python3\Scripts;%PATH%
 set PATH=%cd%\git;%cd%\git\cmd;%cd%\git\mingw64\bin;%cd%\git\usr\bin;%PATH%
 
