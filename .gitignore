@@ -20,3 +20,6 @@ playground/pytorch/basics/*
 playground/pytorch/beginner/*
 !playground/pytorch/beginner/*.py
 !playground/pytorch/beginner/*.ipynb
+playground/pytorch/study/*
+!playground/pytorch/study/*.py
+!playground/pytorch/study/*.ipynb
