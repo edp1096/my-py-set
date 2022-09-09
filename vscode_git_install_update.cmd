@@ -113,7 +113,7 @@ if "%WORKING_MODE%" == "install" (
     echo ]>> data\user-data\User\keybindings.json
 
     call bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-python.python 2>nul
-    call bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension PKief.material-icon-theme 2>nul
+    call bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension vscode-icons-team.vscode-icons 2>nul
     
     cd ..
 
