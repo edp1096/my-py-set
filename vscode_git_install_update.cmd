@@ -103,6 +103,11 @@ if "%WORKING_MODE%" == "install" (
     echo     "security.workspace.trust.enabled": false,>> data\user-data\User\settings.json
     echo     "scm.alwaysShowRepositories": true,>> data\user-data\User\settings.json
     echo     "terminal.integrated.cwd": "${workspaceFolder}",>> data\user-data\User\settings.json
+    echo    "workbench.iconTheme": "vscode-icons",>> data\user-data\User\settings.json
+    echo    "vsicons.dontShowNewVersionMessage": true,>> data\user-data\User\settings.json
+    echo    "git.enableSmartCommit": true,>> data\user-data\User\settings.json
+    echo    "git.confirmSync": false,>> data\user-data\User\settings.json
+    echo    "git.autofetch": true,>> data\user-data\User\settings.json
     echo }>> data\user-data\User\settings.json
     
     echo [>> data\user-data\User\keybindings.json
