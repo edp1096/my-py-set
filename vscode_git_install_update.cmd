@@ -109,7 +109,7 @@ if "%WORKING_MODE%" == "install" (
     echo    "git.confirmSync": false,>> data\user-data\User\settings.json
     echo    "git.autofetch": true,>> data\user-data\User\settings.json
     echo    "python.formatting.provider": "black",>> data\user-data\User\settings.json
-    echo    "python.formatting.blackArgs": ["--line-length", "120"],>> data\user-data\User\settings.json
+    echo    "python.formatting.blackArgs": [ "--line-length", "120" ],>> data\user-data\User\settings.json
     echo }>> data\user-data\User\settings.json
     
     echo [>> data\user-data\User\keybindings.json
