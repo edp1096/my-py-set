@@ -104,8 +104,16 @@ if "%WORKING_MODE%" == "install" (
     echo     "scm.alwaysShowRepositories": true,>> data\user-data\User\settings.json
     echo     "terminal.integrated.cwd": "${workspaceFolder}",>> data\user-data\User\settings.json
     echo }>> data\user-data\User\settings.json
+    
+    echo [>> data\user-data\User\keybindings.json
+    echo     {>> data\user-data\User\keybindings.json
+    echo         "key": "alt+oem_3",>> data\user-data\User\keybindings.json
+    echo         "command": "workbench.action.createTerminalEditor">> data\user-data\User\keybindings.json
+    echo     }>> data\user-data\User\keybindings.json
+    echo ]>> data\user-data\User\keybindings.json
 
     call bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-python.python 2>nul
+    call bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension PKief.material-icon-theme 2>nul
     
     cd ..
 
