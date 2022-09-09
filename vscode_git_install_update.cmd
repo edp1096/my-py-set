@@ -40,6 +40,13 @@ echo @import url("http://fonts.cdnfonts.com/css/cascadia-code");>> %WORKBENCH_DE
 
 
 if "%WORKING_MODE%" == "install" (
+
+    if not exist home (
+        mkdir home
+        mkdir home\user-profile
+        mkdir home\user-profile\Desktop
+    )
+
     if not exist data (
         mkdir data
         mkdir data\user-data
