@@ -21,4 +21,4 @@ playground/pytorch/beginner/*
 !playground/pytorch/beginner/*.py
 !playground/pytorch/beginner/*.ipynb
 
-playground/pytorch/study
+playground/study
