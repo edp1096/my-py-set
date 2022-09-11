@@ -147,3 +147,8 @@ tar -xf git.zip --directory=git
 del git.zip /q /s 1>nul
 
 %SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -Command "& ./vscode_checksum_fix.ps1"
+
+
+%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -Command "& ./shortcut_create.ps1"
+copy "Python Code.lnk" %UserProfile%\desktop /y 1>nul
+
