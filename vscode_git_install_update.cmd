@@ -62,7 +62,7 @@ if "%WORKING_MODE%" == "install" (
     echo         "terminalEditor": false,>> data\user-data\User\settings.json
     echo     },>> data\user-data\User\settings.json
     echo     "telemetry.telemetryLevel": "off",>> data\user-data\User\settings.json
-    echo     "editor.fontFamily": "D2Coding ligature, Cascadia Code, Consolas, 'Courier New', monospace",>> data\user-data\User\settings.json
+    echo     "editor.fontFamily": "D2Coding, Cascadia Code, Consolas, 'Courier New', monospace",>> data\user-data\User\settings.json
     echo     "editor.fontLigatures": true,>> data\user-data\User\settings.json
     echo     "editor.fontSize": 16.7,>> data\user-data\User\settings.json
     echo     "editor.minimap.enabled": false,>> data\user-data\User\settings.json
