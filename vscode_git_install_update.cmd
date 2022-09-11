@@ -5,8 +5,12 @@ set NODE_OPTIONS=--throw-deprecation
 
 set WORKING_MODE=install
 
+%SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -Command "& ./git_get_version.ps1"
+set /p GIT_DOWNLOAD_URL=<GIT_DOWNLOAD_URL
+
+
 if exist vscode (
-    echo Update vscode
+    echo Update vscode,  git
     echo If you want to reinstall, delete 'vscode' folder or run 'delete_all.cmd' then run this script again
 
     set WORKING_MODE=update
@@ -128,18 +132,18 @@ if "%WORKING_MODE%" == "install" (
 
     call bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-python.python 2>nul
     call bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension vscode-icons-team.vscode-icons 2>nul
-    
+
     cd ..
-
-    
-    curl --progress-bar -Lo git.zip https://github.com/git-for-windows/git/releases/download/v2.37.3.windows.1/MinGit-2.37.3-busybox-64-bit.zip
-    if not exist git ( mkdir git )
-    tar -xf git.zip --directory=git
-
-    del git.zip /q /s 1>nul
 
 ) else (
     cd ..
 )
+
+rmdir git /q /s 2>nul
+curl --progress-bar -Lo git.zip %GIT_DOWNLOAD_URL%
+if not exist git ( mkdir git )
+tar -xf git.zip --directory=git
+
+del git.zip /q /s 1>nul
 
 %SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -Command "& ./vscode_checksum_fix.ps1"
