@@ -22,3 +22,8 @@ playground/pytorch/beginner/*
 !playground/pytorch/beginner/*.ipynb
 
 playground/study
+
+
+playground/tensorflow/movie-poster/*
+!playground/tensorflow/movie-poster/*.py
+!playground/tensorflow/movie-poster/*.ipynb
