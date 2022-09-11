@@ -4,6 +4,9 @@ cuda
 vscode
 git
 
+Python Code.lnk
+
+
 playground/crawler/*
 !playground/crawler
 !playground/crawler/*.py
