@@ -1,4 +1,4 @@
-@REM @echo off
+@echo off
 
 set HOME=%cd%\home
 set USERPROFILE=%cd%\home\user-profile
