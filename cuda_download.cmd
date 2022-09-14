@@ -11,11 +11,17 @@
 @REM cudnn64_8.dll
 
 
-if not exist cuda ( mkdir cuda )
+if not exist cuda (
+    mkdir cuda
+)
 cd cuda
 
-if not exist dll ( mkdir dll )
-if not exist zip ( mkdir zip )
+if not exist dll (
+    mkdir dll
+)
+if not exist zip (
+    mkdir zip
+)
 
 
 curl --progress-bar -Lo cudart.zip https://developer.download.nvidia.com/compute/cuda/redist/cuda_cudart/windows-x86_64/cuda_cudart-windows-x86_64-11.6.55-archive.zip

@@ -63,8 +63,12 @@ del get-pip.py 1>nul
 curl --progress-bar -Lo dev.msi https://www.python.org/ftp/python/%PYTHON_VERSION%/amd64/dev.msi
 msiexec /a dev.msi targetdir="%cd%\dev" /qn
 
-if not exist python3\include ( mkdir python3\include )
-if not exist python3\libs ( mkdir python3\libs )
+if not exist python3\include (
+	mkdir python3\include
+)
+if not exist python3\libs (
+	mkdir python3\libs
+)
 xcopy dev\include\* python3\include\* /e/h/y/q 1>nul
 xcopy dev\libs\* python3\libs\* /e/h/y/q 1>nul
 

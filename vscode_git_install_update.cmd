@@ -141,7 +141,9 @@ if "%WORKING_MODE%" == "install" (
 
 rmdir git /q /s 2>nul
 curl --progress-bar -Lo git.zip %GIT_DOWNLOAD_URL%
-if not exist git ( mkdir git )
+if not exist git (
+    mkdir git
+)
 tar -xf git.zip --directory=git
 
 del git.zip /q /s 1>nul
