@@ -19,7 +19,7 @@ if exist vscode (
 
     for /f %%F in ('dir . /b /a-d ^| findstr /vile "data"') do (del "%%F")
     for /f %%D in ('dir /b /ad ^| findstr /vile "data"') do (rmdir "%%D"/q/s)
-    
+
     cd ..
 
 ) else (
@@ -122,7 +122,7 @@ if "%WORKING_MODE%" == "install" (
     echo    "python.formatting.provider": "black",>> data\user-data\User\settings.json
     echo    "python.formatting.blackArgs": [ "--line-length", "120" ],>> data\user-data\User\settings.json
     echo }>> data\user-data\User\settings.json
-    
+
     echo [>> data\user-data\User\keybindings.json
     echo     {>> data\user-data\User\keybindings.json
     echo         "key": "alt+oem_3",>> data\user-data\User\keybindings.json
