@@ -1,16 +1,14 @@
 Scripts for portable python toy creation on Windows
 
 
-
-
 ## Scripts
 
-* `ExecutionPolicy` should be set to `Unrestricted`
+* `ExecutionPolicy` should be set to `RemoteSigned`
 ```powershell
 # Check
 ExecutionPolicy
-# Set as Unrestricted
-Set-ExecutionPolicy Unrestricted
+# Set as RemoteSigned
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
 
 * `python_install_update.cmd` - Install or update python >= python 3.9
