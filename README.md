@@ -1,7 +1,17 @@
 Scripts for portable python toy creation on Windows
 
 
+
+
 ## Scripts
+
+* `ExecutionPolicy` should be set to `Unrestricted`
+```powershell
+# Check
+ExecutionPolicy
+# Set as Unrestricted
+Set-ExecutionPolicy Unrestricted
+```
 
 * `python_install_update.cmd` - Install or update python >= python 3.9
     * `PYTHON_VERSION` - Environment variable for `python_install_update.cmd`
