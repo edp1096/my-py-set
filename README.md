@@ -3,12 +3,15 @@ Scripts for portable python toy creation on Windows
 
 ## Scripts
 
-* `ExecutionPolicy` should be set to `RemoteSigned`
+* `ExecutionPolicy` should be set to `RemoteSigned` and unblock `ps1` files
 ```powershell
 # Check
 ExecutionPolicy
 # Set as RemoteSigned
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+
+# Unblock ps1 files
+Unblock-File *.ps1
 ```
 
 * `python_install_update.cmd` - Install or update python >= python 3.9
