@@ -1,5 +1,5 @@
 $url = "https://www.python.org/downloads"
-$doc = (Invoke-Webrequest $url).ParsedHTML # mshtml.HTMLDocumentClass
+$doc = (Invoke-Webrequest -UseBasicParsing $url).ParsedHTML # mshtml.HTMLDocumentClass
 $as = $doc.Links
 
 foreach($a in $as) {
