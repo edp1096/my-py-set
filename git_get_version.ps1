@@ -1,6 +1,6 @@
 $uri = "https://api.github.com/repos/git-for-windows/git/releases/latest"
 
-$json = Invoke-WebRequest -Uri $uri | ConvertFrom-Json
+$json = Invoke-WebRequest -UseBasicParsing -Uri $uri | ConvertFrom-Json
 
 $versions = $json.name.Split()
 $version = $versions[$versions.length - 1]
