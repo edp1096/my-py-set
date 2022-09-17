@@ -24,7 +24,7 @@ playground/pytorch/beginner/*
 !playground/pytorch/beginner/*.py
 !playground/pytorch/beginner/*.ipynb
 
-playground/study
+playground/pytorch-study
 
 
 playground/tensorflow/movie-poster/*
