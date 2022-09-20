@@ -11,7 +11,6 @@ set /p GIT_DOWNLOAD_URL=<GIT_DOWNLOAD_URL
 
 if exist vscode (
     echo Update vscode,  git
-    echo If you want to reinstall, delete 'vscode' folder or run 'delete_all.cmd' then run this script again
 
     set WORKING_MODE=update
 
@@ -34,8 +33,7 @@ del vscode.zip /q /s 1>nul
 
 cd vscode
 
-@REM Set webfont
-@REM https://stackoverflow.com/a/54124991/8964990
+@REM Set webfont - https://stackoverflow.com/a/54124991/8964990
 set WORKBENCH_DESKTOP_MAIN_CSS=%cd%\resources\app\out\vs\workbench\workbench.desktop.main.css
 
 echo.>> %WORKBENCH_DESKTOP_MAIN_CSS%
@@ -49,6 +47,11 @@ if "%WORKING_MODE%" == "install" (
         mkdir home
         mkdir home\user-profile
         mkdir home\user-profile\Desktop
+
+        @REM Powershell short prompt - https://superuser.com/a/446836
+        mkdir home\user-profile\Documents
+        mkdir home\user-profile\Documents\WindowsPowerShell
+        echo "function prompt { $p = Split-Path -leaf -path (Get-Location); \"$p> \" }" > home\user-profile\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
     )
 
     if not exist data (
