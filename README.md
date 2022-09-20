@@ -25,6 +25,7 @@ Unblock-File *.ps1
 
 * Vscode, Git
     * vscode_git_install_update.cmd - Install vscode, git. Update vscode
+        * GIT_DOWNLOAD_URL - Environment variable for vscode_git_install_update.cmd
         * vscode_checksum_fix.ps1 - For [webfont](https://github.com/Joungkyun/font-d2coding-ligature). <b>Do not run directly<b>
     * vscode_run.cmd - Run vscode
 
