@@ -11,6 +11,7 @@ set /p GIT_DOWNLOAD_URL=<GIT_DOWNLOAD_URL
 
 if exist vscode (
     echo Update vscode,  git
+    echo If you want to reinstall, delete 'vscode' folder or run 'delete_all.cmd' then run this script again
 
     set WORKING_MODE=update
 
