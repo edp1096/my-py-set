@@ -25,7 +25,8 @@ playground/pytorch/beginner/*
 !playground/pytorch/beginner/*.ipynb
 
 playground/pytorch-study
-
+playground/woman-ovulation
+playground/crawl-pinterest
 
 playground/tensorflow/movie-poster/*
 !playground/tensorflow/movie-poster/*.py
