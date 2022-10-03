@@ -29,6 +29,16 @@ Unblock-File *.ps1
         * vscode_checksum_fix.ps1 - For [webfont](https://github.com/Joungkyun/font-d2coding-ligature). <b>Do not run directly<b>
     * vscode_run.cmd - Run vscode
 
+* Using `MSVC` for `dlib`, `opencv` installation
+    * Run `vs developer command prompt`
+    * Move repository root. In my case, did following
+    ```cmd
+    > d:
+    > cd D:\devs\my-py-set
+    ```
+    * Run `console.cmd`
+    * Run `pip install dlib` or `pip install opencv`
+
 
 ## Others
 
