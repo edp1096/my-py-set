@@ -9,6 +9,18 @@ set WORKING_MODE=install
 set /p GIT_DOWNLOAD_URL=<GIT_DOWNLOAD_URL
 
 
+if not exist home (
+    mkdir home
+    mkdir home\user-profile
+    mkdir home\user-profile\Desktop
+
+    @REM Powershell short prompt - https://superuser.com/a/446836
+    mkdir home\user-profile\Documents
+    mkdir home\user-profile\Documents\WindowsPowerShell
+    echo "function prompt { $p = Split-Path -leaf -path (Get-Location); \"$p> \" }" > home\user-profile\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+)
+
+
 if exist vscode (
     echo Update vscode,  git
     echo If you want to reinstall, delete 'vscode' folder or run 'delete_all.cmd' then run this script again
@@ -46,18 +58,6 @@ echo }>> %WORKBENCH_DESKTOP_MAIN_CSS%
 echo @import url("http://fonts.cdnfonts.com/css/cascadia-code");>> %WORKBENCH_DESKTOP_MAIN_CSS%
 
 if "%WORKING_MODE%" == "install" (
-
-    if not exist home (
-        mkdir home
-        mkdir home\user-profile
-        mkdir home\user-profile\Desktop
-
-        @REM Powershell short prompt - https://superuser.com/a/446836
-        mkdir home\user-profile\Documents
-        mkdir home\user-profile\Documents\WindowsPowerShell
-        echo "function prompt { $p = Split-Path -leaf -path (Get-Location); \"$p> \" }" > home\user-profile\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
-    )
-
     if not exist data (
         mkdir data
         mkdir data\user-data
