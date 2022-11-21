@@ -17,7 +17,7 @@ if not exist home (
     @REM Powershell short prompt - https://superuser.com/a/446836
     mkdir home\user-profile\Documents
     mkdir home\user-profile\Documents\WindowsPowerShell
-    echo "function prompt { $p = Split-Path -leaf -path (Get-Location); \"$p> \" }" > home\user-profile\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+    @REM echo "function prompt { $p = Split-Path -leaf -path (Get-Location); \"$p> \" }" > home\user-profile\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
 )
 
 

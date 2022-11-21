@@ -24,6 +24,9 @@ playground/pytorch/beginner/*
 !playground/pytorch/beginner/*.py
 !playground/pytorch/beginner/*.ipynb
 
+playground/ajirangi
+playground/hello-keypoint
+playground/hello-craft
 playground/pytorch-study
 playground/woman-ovulation
 playground/crawl-pinterest
