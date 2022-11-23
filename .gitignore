@@ -26,6 +26,7 @@ playground/pytorch/beginner/*
 
 playground/ajirangi
 playground/hello-keypoint
+playground/featurepoint-extractor
 playground/hello-craft
 playground/pytorch-study
 playground/woman-ovulation
