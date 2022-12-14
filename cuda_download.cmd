@@ -31,6 +31,7 @@ curl --progress-bar -Lo curand.zip https://developer.download.nvidia.com/compute
 curl --progress-bar -Lo cusolver.zip https://developer.download.nvidia.com/compute/cuda/redist/libcusolver/windows-x86_64/libcusolver-windows-x86_64-11.4.0.1-archive.zip
 curl --progress-bar -Lo cusparse.zip https://developer.download.nvidia.com/compute/cuda/redist/libcusparse/windows-x86_64/libcusparse-windows-x86_64-11.7.3.50-archive.zip
 curl --progress-bar -Lo cudnn.zip https://developer.download.nvidia.com/compute/redist/cudnn/v8.4.1/local_installers/11.6/cudnn-windows-x86_64-8.4.1.50_cuda11.6-archive.zip
+curl --progress-bar -Lo nvcc.zip https://developer.download.nvidia.com/compute/cuda/redist/cuda_nvcc/windows-x86_64/cuda_nvcc-windows-x86_64-11.7.99-archive.zip
 
 
 FOR /F "delims=" %%a IN ('dir /b /a-d "*.zip"') DO (
