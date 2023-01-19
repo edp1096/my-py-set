@@ -14,7 +14,7 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 Unblock-File *.ps1
 ```
 
-* python_install_update.cmd - Install or update python >= python 3.9
+* python_install_update.cmd - Install or update python embeddable with Tcl/Tk >= python 3.9
     * PYTHON_VERSION - Environment variable for python_install_update.cmd
     * python_get_version.ps1 - Check and write latest version of python to PYTHON_VERSION
 * python_remove_absolute.ps1 - Modify Scripts/*.exe
