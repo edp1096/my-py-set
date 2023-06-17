@@ -5,9 +5,9 @@ if not exist vscode (
 )
 
 set HOME=%cd%\home
-@REM Makeshift until solve WSL problem - The system cannot find the path specified.
-@REM set USERPROFILE=%cd%\home\user-profile
-set APPDATA=%cd%\home\app-data
+@rem set USERPROFILE=%cd%\home\user-profile
+set APPDATA=%cd%\home\user-profile\AppData\Roaming
+set LOCALAPPDATA=%cd%\home\user-profile\AppData\Local
 
 set GIT_CEILING_DIRECTORIES=%cd%\playground
 
