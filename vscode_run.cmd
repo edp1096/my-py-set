@@ -5,7 +5,7 @@ if not exist vscode (
 )
 
 set HOME=%cd%\home
-@rem set USERPROFILE=%cd%\home\user-profile
+set USERPROFILE=%cd%\home\user-profile
 set APPDATA=%cd%\home\user-profile\AppData\Roaming
 set LOCALAPPDATA=%cd%\home\user-profile\AppData\Local
 
