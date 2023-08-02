@@ -6,33 +6,5 @@ git
 
 Python Code.lnk
 
-/playground
-
-playground/crawler/*
-!playground/crawler
-!playground/crawler/*.py
-
-
-playground/dlib/*
-!playground/dlib/*.py
-!playground/dlib/*.ipynb
-
-playground/pytorch/MNIST_data
-playground/pytorch/basics/*
-!playground/pytorch/basics/*.py
-!playground/pytorch/basics/*.ipynb
-playground/pytorch/beginner/*
-!playground/pytorch/beginner/*.py
-!playground/pytorch/beginner/*.ipynb
-
-playground/ajirangi
-playground/hello-keypoint
-playground/featurepoint-extractor
-playground/hello-craft
-playground/pytorch-study
-playground/woman-ovulation
-playground/crawl-pinterest
-
-playground/tensorflow/movie-poster/*
-!playground/tensorflow/movie-poster/*.py
-!playground/tensorflow/movie-poster/*.ipynb
+/playground/*
+!/playground/hello
