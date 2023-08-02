@@ -14,18 +14,15 @@ Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 Unblock-File *.ps1
 ```
 
-* python_install_update.cmd - Install or update python embeddable with Tcl/Tk >= python 3.9
-    * PYTHON_VERSION - Environment variable for python_install_update.cmd
-    * python_get_version.ps1 - Check and write latest version of python to PYTHON_VERSION
+* python_install_update.ps1 - Install or update python embeddable with Tcl/Tk >= python 3.9
 * python_remove_absolute.ps1 - Modify Scripts/*.exe
     * It change hexdata from absolute "#!x:\blah\blah\python.exe" to "#!  python.exe" in pip.exe, wheel.exe..
-
 * delete_all.cmd - Delete all installed
 * console.cmd - Command prompt with the python path
+* cuda_download.ps1 - Download cuda dll files
 
 * Vscode, Git
-    * vscode_git_install_update.cmd - Install vscode, git. Update vscode
-        * GIT_DOWNLOAD_URL - Environment variable for vscode_git_install_update.cmd
+    * vscode_git_install_update.ps1 - Install vscode, git. Update vscode
         * vscode_checksum_fix.ps1 - For [webfont](https://github.com/Joungkyun/font-d2coding-ligature). <b>Do not run directly<b>
     * vscode_run.cmd - Run vscode
 

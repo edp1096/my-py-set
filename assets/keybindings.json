@@ -1,0 +1,6 @@
+[
+    {
+        "key": "alt+oem_3",
+        "command": "workbench.action.createTerminalEditor"
+    }
+]

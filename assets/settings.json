@@ -1,0 +1,69 @@
+{
+    "update.mode": "none",
+    "workbench.startupEditor": "none",
+    "workbench.settings.editor": "json",
+    "workbench.sideBar.location": "right",
+    "workbench.editor.autoLockGroups": {
+        "terminalEditor": false,
+    },
+    "telemetry.telemetryLevel": "off",
+    "editor.fontFamily": "D2Coding ligature, Cascadia Code, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 16.7,
+    "editor.minimap.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
+    "breadcrumbs.enabled": true,
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": -1,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "source.go keyword.package.go",
+                    "source.go keyword.import.go",
+                    "source.go keyword.function.go",
+                    "source.go keyword.type.go",
+                    "source.go keyword.struct.go",
+                    "source.go keyword.interface.go",
+                    "source.go keyword.const.go",
+                    "source.go keyword.var.go",
+                    "source.go keyword.map.go",
+                    "source.go keyword.channel.go",
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment",
+                    "constant.language",
+                    "keyword.control",
+                    "keyword.operator.expression",
+                    "keyword.other",
+                    "keyword.operator.new",
+                    "variable.language",
+                    "entity.other.attribute-name",
+                    "storage",
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+        ]
+    },
+    "security.workspace.trust.enabled": false,
+    "scm.alwaysShowRepositories": true,
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.dontShowNewVersionMessage": true,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.openRepositoryInParentFolders": "never",
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "144"
+    ]
+}
