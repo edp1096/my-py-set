@@ -59,6 +59,10 @@ remove-item -force -ea 0 get-pip.py
 $pyVers = $pythonVersion.split(".")
 $pyVer = $pyVers[0]+$pyVers[1]
 $pthFile = ".\python3\python$pyVer._pth"
-$pthPaths = "Lib\site-packages"
-echo $pthFile
+# $pthPaths = "Lib\site-packages"
+$pthPaths = "import site"
 add-content -path $pthFile -value $pthPaths
+
+$siteCustomFile = "python3\sitecustomize.py"
+$siteCustomText = "import sys"+"`n"+"sys.path.insert(0, '')"
+add-content -path $siteCustomFile -value $siteCustomText
