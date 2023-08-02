@@ -22,24 +22,26 @@ start-bitstransfer -destination python3.zip -source $uri
 tar -xf python3.zip -C python3
 remove-item -force python3.zip
 
+new-item -ea 0 -itemtype directory -path python3\include | out-null
+new-item -ea 0 -itemtype directory -path python3\libs | out-null
 $uri = "https://www.python.org/ftp/python/$pythonVersion/amd64/dev.msi"
 start-bitstransfer -destination dev.msi -source $uri
 msiexec /a dev.msi targetdir="$pwd\dev" /qn
-new-item -ea 0 -itemtype directory -path python3\include | out-null
-new-item -ea 0 -itemtype directory -path python3\libs | out-null
+Start-Sleep -Seconds 2
 copy-item -r -force -ea 0 dev\include\* python3\include
 copy-item -r -force -ea 0 dev\libs\* python3\libs ; remove-item -r -force -ea 0 dev, dev.msi
 
+new-item -ea 0 -itemtype directory -path python3\DLLs | out-null
 $uri = "https://www.python.org/ftp/python/$pythonVersion/amd64/tcltk.msi"
 start-bitstransfer -destination tcltk.msi -source $uri
 msiexec /a tcltk.msi targetdir="$pwd\tk_down" /qn
-new-item -ea 0 -itemtype directory -path python3\DLLs | out-null
-copy-item -r -force -ea 0 tk_down\DLLs\* python3\DLLs
-copy-item -r -force -ea 0 tk_down\Lib\tkinter python3\Lib\site-packages\tkinter
-copy-item -r -force -ea 0 tk_down\tcl\tcl8.6 python3\lib\tcl8.6
-copy-item -r -force -ea 0 tk_down\tcl\tk8.6 python3\lib\tk8.6
-copy-item -r -force -ea 0 tk_down\tcl\tix8.4.3 python3\lib\tix8.4.3
-copy-item -r -force -ea 0 tk_down\tcl\reg1.3 python3\lib\reg1.3
+Start-Sleep -Seconds 2
+copy-item -r -force tk_down\DLLs\* python3\DLLs
+copy-item -r -force tk_down\Lib\tkinter python3\Lib\site-packages\tkinter
+copy-item -r -force tk_down\tcl\tcl8.6 python3\lib\tcl8.6
+copy-item -r -force tk_down\tcl\tk8.6 python3\lib\tk8.6
+copy-item -r -force tk_down\tcl\tix8.4.3 python3\lib\tix8.4.3
+copy-item -r -force tk_down\tcl\reg1.3 python3\lib\reg1.3
 copy-item -r -force -ea 0 tk_down\tcl\dde1.4 python3\lib\dde1.4 ; remove-item -r -force -ea 0 tk_down, tcltk.msi
 
 copy-item -force -ea 0 python3\python.exe python3\py.exe | out-null
@@ -52,3 +54,11 @@ $uri = "https://bootstrap.pypa.io/get-pip.py"
 start-bitstransfer -destination get-pip.py -source $uri
 python ./get-pip.py
 remove-item -force -ea 0 get-pip.py
+
+
+$pyVers = $pythonVersion.split(".")
+$pyVer = $pyVers[0]+$pyVers[1]
+$pthFile = ".\python3\python$pyVer._pth"
+$pthPaths = "Lib\site-packages"
+echo $pthFile
+add-content -path $pthFile -value $pthPaths

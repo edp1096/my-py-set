@@ -1,6 +1,11 @@
 Scripts for portable python toy creation on Windows
 
 
+## Run
+```powershell
+.\install_update_all.ps1
+```
+
 ## Scripts
 
 * `ExecutionPolicy` should be set to `RemoteSigned` and unblock `ps1` files
