@@ -27,7 +27,7 @@ new-item -ea 0 -itemtype directory -path python3\libs | out-null
 $uri = "https://www.python.org/ftp/python/$pythonVersion/amd64/dev.msi"
 start-bitstransfer -destination dev.msi -source $uri
 msiexec /a dev.msi targetdir="$pwd\dev" /qn
-Start-Sleep -Seconds 2
+Start-Sleep -Seconds 5
 copy-item -r -force -ea 0 dev\include\* python3\include
 copy-item -r -force -ea 0 dev\libs\* python3\libs ; remove-item -r -force -ea 0 dev, dev.msi
 
@@ -35,7 +35,7 @@ new-item -ea 0 -itemtype directory -path python3\DLLs | out-null
 $uri = "https://www.python.org/ftp/python/$pythonVersion/amd64/tcltk.msi"
 start-bitstransfer -destination tcltk.msi -source $uri
 msiexec /a tcltk.msi targetdir="$pwd\tk_down" /qn
-Start-Sleep -Seconds 2
+Start-Sleep -Seconds 5
 copy-item -r -force tk_down\DLLs\* python3\DLLs
 copy-item -r -force tk_down\Lib\tkinter python3\Lib\site-packages\tkinter
 copy-item -r -force tk_down\tcl\tcl8.6 python3\lib\tcl8.6
