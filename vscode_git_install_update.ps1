@@ -35,6 +35,8 @@ tar -xf vscode.zip -C vscode
 copy-item -force assets\*.json vscode\data\user-data\User
 remove-item -force vscode.zip
 
+.\shortcut_create.ps1
+copy-item -force "Python Code.lnk" $env:UserProfile\desktop
 
 if ($workingMode -eq "update") {
     exit
@@ -59,5 +61,3 @@ $env:NODE_NO_WARNINGS = 0
 cd ..
 
 .\vscode_checksum_fix.ps1
-.\shortcut_create.ps1
-copy-item "Python Code.lnk" $env:UserProfile\desktop
