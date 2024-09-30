@@ -12,6 +12,9 @@ foreach($a in $links) {
     }
 }
 
+# latest version
+write-host "Python version: $pythonVersion"
+
 remove-item -r -force -ea 0 python3
 new-item -ea 0 -itemtype directory -path python3 | out-null
 
@@ -52,7 +55,7 @@ $env:Path += ";$pwd\python3;$pwd\python3\Scripts"
 
 $uri = "https://bootstrap.pypa.io/get-pip.py"
 start-bitstransfer -destination get-pip.py -source $uri
-python ./get-pip.py
+python3/python ./get-pip.py
 remove-item -force -ea 0 get-pip.py
 
 

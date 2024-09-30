@@ -51,7 +51,7 @@ url('https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding-ligature/D2Coding-ligat
 }`
 @import url('http://fonts.cdnfonts.com/css/cascadia-code');"
 
-Add-Content -path $workbenchDesktopMainCSS -value $appendContent
+# Add-Content -path $workbenchDesktopMainCSS -value $appendContent
 
 cd vscode
 $env:NODE_NO_WARNINGS = 1
@@ -60,4 +60,4 @@ bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data 
 $env:NODE_NO_WARNINGS = 0
 cd ..
 
-.\vscode_checksum_fix.ps1
+# .\vscode_checksum_fix.ps1
