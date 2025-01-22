@@ -43,7 +43,7 @@ copy-item -r -force tk_down\DLLs\* python3\DLLs
 copy-item -r -force tk_down\Lib\tkinter python3\Lib\site-packages\tkinter
 copy-item -r -force tk_down\tcl\tcl8.6 python3\lib\tcl8.6
 copy-item -r -force tk_down\tcl\tk8.6 python3\lib\tk8.6
-copy-item -r -force tk_down\tcl\tix8.4.3 python3\lib\tix8.4.3
+# copy-item -r -force tk_down\tcl\tix8.4.3 python3\lib\tix8.4.3
 copy-item -r -force tk_down\tcl\reg1.3 python3\lib\reg1.3
 copy-item -r -force -ea 0 tk_down\tcl\dde1.4 python3\lib\dde1.4 ; remove-item -r -force -ea 0 tk_down, tcltk.msi
 
