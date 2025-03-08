@@ -3,8 +3,11 @@ python3
 cuda
 vscode
 git
+/llm
 
 Python Code.lnk
 
 /playground/*
 !/playground/hello
+
+/run_ollama.cmd
