@@ -65,8 +65,9 @@ $pthFile = ".\python3\python$pyVer._pth"
 # # $pthPaths = "Lib\site-packages"
 # $pthPaths = "import site"
 # add-content -path $pthFile -value $pthPaths
-$pthPaths = ".`nDLLs`nimport site"
-Set-Content -Path $pthFile -Value $pthPaths
+$firstLine = Get-Content $pthFile -TotalCount 1
+$newContent = $firstLine + "`n." + "`nLib" + "`nDLLs" + "`nimport site"
+Set-Content -Path $pthFile -Value $newContent
 
 $siteCustomFile = "python3\sitecustomize.py"
 $siteCustomText = "import sys"+"`n"+"sys.path.insert(0, '')"
