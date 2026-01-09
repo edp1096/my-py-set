@@ -57,6 +57,7 @@ cd vscode
 $env:NODE_NO_WARNINGS = 1
 bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension vscode-icons-team.vscode-icons
 bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ms-python.python
+bin\code.cmd --extensions-dir .\data\extension --user-data-dir .\data\user-data --install-extension ilich8086.launcher
 $env:NODE_NO_WARNINGS = 0
 cd ..
 

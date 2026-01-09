@@ -1,9 +1,12 @@
-home
-python3
-cuda
-vscode
-git
+/home
+/python3
+/cuda
+/vscode
+/git
 /llm
+/mingw
+/blender
+.claude
 
 Python Code.lnk
 
@@ -11,3 +14,4 @@ Python Code.lnk
 !/playground/hello
 
 /run_ollama.cmd
+/update_num.cmd

@@ -52,6 +52,15 @@
             },
         ]
     },
+    "window.commandCenter": false,
+    "launcher.commands": [
+        {
+            "description": "Run Blender",
+            "executable": "blender.exe",
+            "parameters": ".",
+            "startIn": "%workspace%"
+        },
+    ],
     "security.workspace.trust.enabled": false,
     "scm.alwaysShowRepositories": true,
     "terminal.integrated.cwd": "${workspaceFolder}",

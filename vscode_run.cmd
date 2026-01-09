@@ -22,6 +22,12 @@ set PATH=%cd%\git;%cd%\git\cmd;%cd%\git\mingw64\bin;%cd%\git\usr\bin;%PATH%
 if exist cuda (
     set PATH=%cd%\cuda\dll\bin;%cd%\cuda\dll\lib;%PATH%
 )
+if exist mingw (
+    set PATH=%cd%\mingw\mingw64\bin;%cd%\mingw\mingw64\x86_64-w64-mingw32\bin;%PATH%
+)
+if exist blender (
+    set PATH=%cd%\blender;%PATH%
+)
 
 @REM %SystemRoot%\SysWOW64\WindowsPowerShell\v1.0\powershell.exe -WindowStyle hidden "vscode\bin\code.cmd --reuse-window --extensions-dir vscode/data/extension --user-data-dir vscode/data/user-data"
 echo Set WshShell = CreateObject("WScript.Shell") > temp.vbs
